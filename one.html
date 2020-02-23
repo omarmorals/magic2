@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Trick</title>
+</head>
+<body>
+    <img src="1box.png" alt="">
+    <h2>Is your number in this box?</h2>
+
+    <input id="yes" type="submit" name="button" onclick="yesFunction();" value="yes"/>
+    <input id="no" type="submit" name="button" onclick="noFunction();" value="no"/>
+
+    <script>
+    console.log( localStorage.getItem("count"))
+    //window.onbeforeunload = function() { return "If you press this button it will take you back to the main screen and reset everything.There is a back button on thescreen that you can use."; };
+    function yesFunction(){
+        
+        localStorage.setItem("count", parseInt(localStorage.getItem("count")) + 1);
+        window.location.href = "two.html";
+    };
+    function noFunction(){
+        
+        window.location.href = "two.html";
+    }; 
+    </script>
+</body>
+</html>

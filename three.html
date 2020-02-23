@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Trick</title>
+</head>
+<body>
+    <img src="3box.png" alt="">
+    <h2>Is your number in this box?</h2>
+
+    <input id="yes" type="submit" name="button" onclick="yesFunction();" value="yes"/>
+    <input id="no" type="submit" name="button" onclick="noFunction();" value="no"/>
+
+    <script>
+    console.log( localStorage.getItem("count"))
+    
+    function yesFunction(){
+        
+        localStorage.setItem("count", parseInt(localStorage.getItem("count")) + 2);
+        window.location.href = "four.html";
+    };
+    function noFunction(){
+        
+        window.location.href = "four.html";
+    }; 
+    </script>
+</body>
+</html>
